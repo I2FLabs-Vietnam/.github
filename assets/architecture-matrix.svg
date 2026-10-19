@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0d1322"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; }
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .box { fill: #0b1120; stroke: #1e293b; stroke-width: 1.5; }
+    .flow-line { stroke: url(#lineGrad); stroke-width: 2; stroke-dasharray: 6 6; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+  </style>
+
+  <rect width="1200" height="250" rx="14" fill="url(#panelBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="35" y="34" class="mono" font-size="11" fill="#38bdf8" letter-spacing="3" font-weight="700">
+    // I2FLABS NEURAL-SYSTEMS TOPOLOGY &amp; DATAFLOW PIPELINE
+  </text>
+  <text x="1165" y="34" text-anchor="end" class="mono" font-size="11" fill="#64748b">
+    ZERO-COPY IPC ⇄ P2P GOSSIP MESH ⇄ ZK-VERIFIED
+  </text>
+  <line x1="35" y1="46" x2="1165" y2="46" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Connecting Pipelines -->
+  <line x1="285" y1="135" x2="345" y2="135" class="flow-line"/>
+  <line x1="585" y1="135" x2="645" y2="135" class="flow-line"/>
+  <line x1="885" y1="135" x2="945" y2="135" class="flow-line"/>
+
+  <!-- Node 1: Microkernel & Architecture -->
+  <g transform="translate(35, 70)">
+    <rect width="250" height="135" rx="10" class="box"/>
+    <path d="M 0 15 L 0 120" stroke="#00f0ff" stroke-width="3"/>
+    <text x="20" y="30" class="mono" font-size="11" fill="#00f0ff" font-weight="700">01 // KERNEL &amp; RUNTIME</text>
+    <text x="20" y="56" class="sans" font-size="16" fill="#f8fafc" font-weight="800">Systems Architecture</text>
+    <text x="20" y="80" class="mono" font-size="11.5" fill="#94a3b8">• Microkernel &amp; Async Reactor</text>
+    <text x="20" y="98" class="mono" font-size="11.5" fill="#94a3b8">• Zero-Copy IPC Primitives</text>
+    <text x="20" y="116" class="mono" font-size="11.5" fill="#94a3b8">• Isolated WASM Sandboxes</text>
+  </g>
+
+  <!-- Node 2: Distributed Protocols & Algorithms -->
+  <g transform="translate(335, 70)">
+    <rect width="250" height="135" rx="10" class="box"/>
+    <path d="M 0 15 L 0 120" stroke="#38bdf8" stroke-width="3"/>
+    <text x="20" y="30" class="mono" font-size="11" fill="#38bdf8" font-weight="700">02 // MESH &amp; TOPOLOGY</text>
+    <text x="20" y="56" class="sans" font-size="16" fill="#f8fafc" font-weight="800">Protocols &amp; Algorithms</text>
+    <text x="20" y="80" class="mono" font-size="11.5" fill="#94a3b8">• PiperNet Binary Wire &amp; P2P</text>
+    <text x="20" y="98" class="mono" font-size="11.5" fill="#94a3b8">• Hypergraph Routing &amp; Proofs</text>
+    <text x="20" y="116" class="mono" font-size="11.5" fill="#94a3b8">• Epidemic Gossip Consensus</text>
+  </g>
+
+  <!-- Node 3: Cognitive Systems -->
+  <g transform="translate(635, 70)">
+    <rect width="250" height="135" rx="10" class="box"/>
+    <path d="M 0 15 L 0 120" stroke="#a855f7" stroke-width="3"/>
+    <text x="20" y="30" class="mono" font-size="11" fill="#a855f7" font-weight="700">03 // NEURAL COGNITION</text>
+    <text x="20" y="56" class="sans" font-size="16" fill="#f8fafc" font-weight="800">Cognitive Swarm AI</text>
+    <text x="20" y="80" class="mono" font-size="11.5" fill="#94a3b8">• Multi-Agent Dialectics</text>
+    <text x="20" y="98" class="mono" font-size="11.5" fill="#94a3b8">• Meta-Cognitive Reflection</text>
+    <text x="20" y="116" class="mono" font-size="11.5" fill="#94a3b8">• Dynamic Persona Distillation</text>
+  </g>
+
+  <!-- Node 4: Security & Socio-Economics -->
+  <g transform="translate(935, 70)">
+    <rect width="230" height="135" rx="10" class="box"/>
+    <path d="M 0 15 L 0 120" stroke="#10b981" stroke-width="3"/>
+    <text x="20" y="30" class="mono" font-size="11" fill="#10b981" font-weight="700">04 // SHIELD &amp; HORIZON</text>
+    <text x="20" y="56" class="sans" font-size="16" fill="#f8fafc" font-weight="800">ZK Security &amp; Society</text>
+    <text x="20" y="80" class="mono" font-size="11.5" fill="#94a3b8">• ZK-Proofs &amp; Ed25519 Verify</text>
+    <text x="20" y="98" class="mono" font-size="11.5" fill="#94a3b8">• Autonomous M2M Economies</text>
+    <text x="20" y="116" class="mono" font-size="11.5" fill="#94a3b8">• Synthetic Epistemology</text>
+  </g>
+</svg>
